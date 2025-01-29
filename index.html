@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="name-form">
+        <label for="name">Ingresa tu nombre:</label>
+        <input type="text" id="name" placeholder="Tu nombre">
+        <button id="send-button">Enviar</button>
+    </div>
+
+    <div class="chat-container">
+        <div class="header">
+            Chat Online
+            <span id="active-users">Usuarios Activos: 0</span> <!-- Aquí mostramos los usuarios activos -->
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="message" placeholder="Escribe tu mensaje..." disabled />
+        <button id="send-message-button" disabled>Enviar Mensaje</button>
+    </div>
+
+    <button id="mode-button">Modo Oscuro</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
